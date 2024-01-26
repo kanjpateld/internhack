@@ -1,0 +1,342 @@
+body{
+    background-color: #dddddd;
+}
+header {
+    height: 70px;
+    background-color: #333;
+    border-radius: 10px 10px 0px 0px;
+    /* padding-top: 10px; */
+    /* padding-left: 20px; */
+    color: white;
+    text-align: center;
+}
+
+.logoandnamebox{
+    /* height: 70px;
+    width: 100px; */
+    width: auto;
+    height: 68px;
+    /* background-color: chartreuse; */
+    display: flex;
+    display: inline-block;
+    /* margin-top: 8px; */
+    /* padding-top: 13px; */
+    /* text-align: center; */
+        
+    /* margin-top: -400px; */
+    
+    /* margin-left: 35px;
+    display: flex;
+    align-items: center;
+    border-radius: 50px 50px 50px 50px;
+    background: linear-gradient(rgb(255, 255, 255),#8d8d8a);
+     display: flex;
+    display: inline;  */
+}
+.logo{
+    width: 51px;
+    height: 51px;
+    /* margin-left: 5px; */
+    /* margin-right: 4px; */
+    margin-top: 6px;
+    border-radius: 50%;
+    background-image: url("logo1.jpeg");
+    background-size: cover;
+    /* background-size: contain; */
+    display: flex;
+    display: inline-block;
+        /* justify-content: center; */
+    /* border: white; */
+    /* border: 2px solid white; */
+    /* background-color: aquamarine; */
+}
+
+.projectname{
+    height: auto;
+    width: auto;
+    /* background-color: red; */
+    color: white;
+    font-size: 52px ;
+    display: flex;
+    display: inline-block;
+    /* align-items: center; */
+    /* padding-left: 5px; */
+    font-family: Calibri;
+    /* font-size: auto ; */
+    /* padding-bottom: 4px; */
+    /* text-align: center; */
+
+
+    /* color:#faf7f7;
+    font-size: 35px ;
+    font-weight: normal;
+    margin-left: 58px;
+    display: inline-block;
+    font-family: Calibri;
+    padding-right: 1100px; */
+}
+
+.projectname:hover{
+    /* color: #ff9900;    */
+    color: #e27127;   
+}
+
+.border{
+    border: 2px solid transparent;
+}
+
+.border:hover{
+    border: 3px solid #090909;
+}
+
+.introduction{
+    height: 250px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0px 0px 15px 15px;
+    margin: 0px 1px 1px 1px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+.introduction:hover{
+    /* height: 202px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px 15px 15px 15px;
+    margin: 1px 1px 1px 1px; */
+    transform: scale(1.007);
+    /* transition: all ease-in-out 1s; */
+}
+.intro1{
+    text-align: center;
+    padding-top: 9px ;
+}
+.intro2{
+    height: 110px;
+    /* background-color: #e27127; */
+    padding-left: 25px;
+    padding-right: 25px;
+    /* text-align: center; */
+    font-size: larger;
+}
+
+.hack{
+    height: 300px;
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+    margin: 15px 1px 1px 1px;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    /* display: inline; */
+}
+.hack:hover{
+    transform: scale(1.007);
+}
+.hackimage{
+    width: 225px;
+    height: 250px;
+    /* background-color: #090909; */
+    /* margin-top: 7px; */
+    margin-left: 50px;
+    margin-right: 100px;
+    
+    /* justify-content: flex-start;  */
+    align-self: center;
+    display: flex;
+    display: inline-block;
+    background-image: url("hackathon2.webp");
+    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.hackimage:hover{
+    width: 225px;
+    height: 225px;
+    background-image: url("hackathon1.jpg");
+    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* transition-duration:  1s; */
+    transition: all ease-in-out 0.5s;
+}
+
+.hackintro{
+    width: 1050px;
+    height: 270px;
+    /* background-color: #5decff; */
+    align-self: center;
+    /* margin-bottom: 50px; */
+}
+.hackintro:hover{
+    width: 1050px;
+    height: 295px;
+    /* background-color: #d1de42; */
+    align-self: center;
+    transition: all ease-in-out 1s;
+}
+
+.hackathon1{
+    font-size: 35px;
+    font-family: Calibri;
+    text-align: center;
+}
+.hackathon2{
+    font-size: larger;
+}
+
+
+
+/* INTERNSHIP PART */
+
+
+
+.intern{
+    height: 300px;
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+    margin: 15px 1px 1px 1px;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    /* display: inline; */
+}
+.intern:hover{
+    transform: scale(1.007);
+}
+.internimage{
+    width: 225px;
+    height: 250px;
+    /* background-color: #090909; */
+    /* margin-top: 7px; */
+    margin-left: 50px;
+    margin-right: 100px;
+    
+    /* justify-content: flex-start;  */
+    align-self: center;
+    display: flex;
+    display: inline-block;
+    background-image: url("internship2.jpeg");
+    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.internimage:hover{
+    width: 225px;
+    height: 225px;
+    background-image: url("internship1.png");
+    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* transition-duration:  1s; */
+    transition: all ease-in-out 0.5s;
+}
+
+.internintro{
+    width: 1050px;
+    height: 270px;
+    margin-left: 50px;
+    /* background-color: #5decff; */
+    align-self: center;
+    /* margin-bottom: 50px; */
+}
+.internintro:hover{
+    width: 1050px;
+    height: 295px;
+    /* background-color: #d1de42; */
+    align-self: center;
+    transition: all ease-in-out 1s;
+}
+
+.internship1{
+    font-size: 35px;
+    font-family: Calibri;
+    text-align: center;
+}
+.internship2{
+    font-size: larger;
+}
+
+
+/* Recruitment */
+
+.Recru{
+    height: 300px;
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+    margin: 15px 1px 1px 1px;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    /* display: inline; */
+}
+.Recru:hover{
+    transform: scale(1.007);
+}
+.Recruimage{
+    width: 225px;
+    height: 250px;
+    /* background-color: #090909; */
+    /* margin-top: 7px; */
+    margin-left: 50px;
+    margin-right: 100px;
+    
+    /* justify-content: flex-start;  */
+    align-self: center;
+    display: flex;
+    display: inline-block;
+    background-image: url("job1.jpeg");
+    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.Recruimage:hover{
+    width: 225px;
+    height: 225px;
+    background-image: url("hackathon_1.jpg");
+    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* transition-duration:  1s; */
+    transition: all ease-in-out 0.5s;
+}
+
+.Recruintro{
+    width: 1050px;
+    height: 270px;
+    /* background-color: #5decff; */
+    align-self: center;
+    /* margin-bottom: 50px; */
+}
+.Recruintro:hover{
+    width: 1050px;
+    height: 295px;
+    /* background-color: #d1de42; */
+    align-self: center;
+    transition: all ease-in-out 1s;
+}
+
+.Recruitment1{
+    font-size: 35px;
+    font-family: Calibri;
+    text-align: center;
+}
+.Recruitment2{
+    font-size: larger;
+}
+
+/* Button */
+.button{
+    height: 30px;
+    width: 80px;
+    font-size: larger;
+    font-weight:bold;
+    color: rgb(0, 0, 0);
+    /* background: linear-gradient(rgb(0, 181, 21),rgb(2, 244, 107)); */
+    background-color: #e27127;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s;
+    border-radius: 8px 8px 8px 8px;
+    /* text-align: center; */
+    margin-left: 47%;
+    margin-top: 10px;
+
+}
