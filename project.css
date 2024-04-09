@@ -1,0 +1,344 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    background-image: url(Homepagebackgraound_1.jpg);
+    background-size: cover;
+    /* background-size: contain; */
+    background-repeat: no-repeat; 
+}
+
+header {
+    height: 50px;
+    background-color: #333;
+    padding: 10px 20px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hevent {
+    margin: 0;
+    padding-top: 7px;
+    padding-left: 50px;
+    text-align: center;
+    /* font-size: 25px; */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.hevent:hover{
+    color:#ff9650; 
+}
+
+
+.logo {
+    width: 47px;
+    height: 47px;
+    background-image: url("logo.jpeg");
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(253, 253, 253, 0.3);
+}
+
+
+/* Styles for the homepage content */
+
+
+.introduction{
+    height: auto;
+    /* width: auto; */
+    background-color: rgb(255, 255, 255);
+    border-radius: 0px 0px 15px 15px;
+    margin: 0px 8px 8px 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    /* display: flex;
+    display: inline-block; */
+}
+.introduction:hover{
+    /* height: 202px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px 15px 15px 15px;
+    margin: 1px 1px 1px 1px; */
+    transform: scale(1.007);
+    /* transition: all ease-in-out 1s; */
+}
+.intro1{
+    font-size: 35px;
+    text-align: center;
+    /* padding-top: 9px ; */
+    font-family: Calibri;
+    padding-top: 50px;
+}
+.introtext{
+    height: auto;
+    /* background-color: #e27127; */
+    padding-left: 18px;
+    padding-right: 18px;
+    /* text-align: center; */
+    font-size: larger;
+    padding-bottom: 18px;
+}
+
+/* 
+.functionality{
+    height: auto;
+   
+    background-color: rgb(255, 255, 255);
+    border-radius: 0px 0px 15px 15px;
+    margin: 0px 8px 8px 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  
+} */
+
+/* #verticaltext {
+    position: absolute;
+    right: -4%;
+    top: 50%;
+}
+
+#verticaltext h1 {
+    font-size: 50px;
+    font-weight: 100;
+    letter-spacing: 0.5px;
+    color: transparent;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(25, 140, 186);
+    transform: rotate(90deg);
+} */
+/* profile side navigation for student */
+
+
+.side-navigation {
+    /* height: 97px; */
+    width: 200px;
+    max-width: 500px;
+    /* max-height: 200px; */
+    /* height: 300px; */
+    background-color: #030303;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 7px;
+    /* display: inline-block; */
+    /* display: flex; */
+}
+
+.side-navigation.show {
+    display: block;
+}
+
+.side-navigation h2 {
+    font-size: 20px;
+    color: #f9f1f1;
+    margin-bottom: 20px;
+}
+
+.side-navigation ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.side-navigation li {
+    margin-bottom: 10px;
+}
+
+.side-navigation a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.side-navigation a:hover {
+    text-decoration: underline;
+}
+#toggleNavButton {
+    height: 32px;
+    width: 15px;
+    /* background-color: #007bff; */
+    color: #fff;
+    /* border: none; */
+    padding: 8px 16px;
+    /* font-size: 16px; */
+    /* border-radius: 4px; */
+    cursor: pointer;
+    background-image: url(ih_userprofile1.png);
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 213, 255, 0.3);
+    /* right: 1px; */
+    /* margin-left: auto; */
+    /* margin-top: 12px;
+    margin-right: 7px; */
+}
+
+#label1 {
+    display: block;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.input1 {
+    width: 100%;
+    /* width: 150px; */
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+    display: flex;
+    color: white;
+}
+
+.input1:focus {
+    border-color: #4CAF50;
+}
+
+#button1 {
+    width:100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#button1:hover {
+    background-color: #45a049;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 8px;
+    margin-right: 8px;
+    /* background-color: rgb(58, 7, 241); */
+    height: auto;
+    margin-top: 40px;
+    margin-right: 70px;
+    margin-left: 70px;
+  }
+  
+.box1{
+    width: 200px; /* Adjust width as per your requirement */
+    height: 200px; /* Set the height as per your requirement */
+    /* background-color: #000000; */
+    background-color: #a0d5d9;
+    /* margin-bottom: 10px; */
+    box-sizing: border-box;
+    border-radius: 5px 5px 5px 5px;
+    background-image: url("hackathon_2.jpg");
+    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 7px 7px 7px 7px;
+
+  }
+.box2{
+    width: 200px; /* Adjust width as per your requirement */
+    height: 200px; /* Set the height as per your requirement */
+    background-color: #a6aac7;
+    /* margin-bottom: 10px; */
+    box-sizing: border-box;
+    border-radius: 5px 5px 5px 5px;
+    background-image: url("internship1.png");
+    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 7px 7px 7px 7px;
+  }
+.box3{
+    width: 200px; /* Adjust width as per your requirement */
+    height: 200px; /* Set the height as per your requirement */
+    background-color: #fcecc3;
+    /* margin-bottom: 10px; */
+    box-sizing: border-box;
+    border-radius: 5px 5px 5px 5px;
+    background-image: url("employee1.png");
+    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 7px 7px 7px 7px;
+  }
+.box4{
+    width: 200px; /* Adjust width as per your requirement */
+    height: 200px; /* Set the height as per your requirement */
+    background-color: #c9edfd;
+    /* margin-bottom: 10px; */
+    box-sizing: border-box;
+    border-radius: 5px 5px 5px 5px;
+    background-image: url("job2.jpeg");
+    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 7px 7px 7px 7px;
+  }
+.box{
+    position: relative;
+    transition: transform 0.3s;
+    box-shadow: 0 0 12px rgba(0, 0, 3, 0.9);
+}
+.box:hover{
+    transform: scale(1.05);
+}
+/* #boxtext{
+    padding-top: 72%;
+    padding-left: 33%;
+    font-size: large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+} */
+  
+#boxtext {
+    position: absolute; /* Position the text absolutely within the box */
+    bottom: 5px; /* Adjust this value as per your requirement */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    font-size: small;
+    font-weight: bold;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+}
+
+@media only screen and (max-width: 600px) {
+    .box {
+      width: 50%; /* Set width to 100% for stacking vertically */
+      /* justify-content: space-between; */
+      margin-left: 25%;
+      height: 160px;
+    }
+    .boxtext {
+        bottom: 3px;
+        /* font-size: smaller; */
+        /* font-size:10px; */
+        /* top: 12px; */
+      /* margin-left: 0%;
+      margin-right: 0%;
+      font-size: smaller; */
+     
+    }
+  }
+
+.redirecthome{
+    height: auto;
+    width: auto;
+    /* background-color: #4CAF50; */
+    margin-left: 83%;
+}
+.homepage{
+    color: white;
+}
+.homepage:hover{
+    color:#ff9650; 
+}

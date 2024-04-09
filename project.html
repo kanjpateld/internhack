@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InternHacks</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1 class="hevent">InternHacks</h1>
+        </div>
+        <div class="redirecthome" onclick="redirecthome()">
+            <h3 class="homepage">Home</h3>
+            <!-- <h2 class="homepage">⌄</h2> -->
+        </div>
+       
+        <div id="toggleNavButton"></div>
+    </header>
+    <!-- <header class="navbar">
+        <div class="logoandnamebox">
+            <div class="logo border">
+                <a class="projectname">InternHacks</a>
+            </div>
+        </div>
+        <button id="toggleNavButton">Profile</button>
+    </header> -->
+
+    <!-- <div class="line2"></div> -->
+
+    <!-- <div class="homepage"> -->
+        <!-- <div id="verticaltext">
+            <h1>InternHacks</h1>
+        </div> -->
+
+        <div class="introduction">
+            <h1 class="intro1">Introduction to InternHacks</h1>
+            <div class="intro2">
+                <p class="introtext">Welcome to the InternHacks! Our Hackathon and Internship Providing Website is more than just a platform; it's a dynamic ecosystem designed to bring together students, professionals, and organizations in a harmonious symphony of creativity and collaboration. Our mission is clear: to provide a comprehensive hub that fuels innovation, nurtures skill development, and encourages meaningful partnerships. Whether you're a passionate student looking to expand your technical and creative horizons or an organization eager to tap into fresh talent, our platform is your gateway to a world of endless possibilities. Join us as we embark on a journey to unlock your potential and drive the future of innovation!</p>           
+            </div>
+        </div> 
+
+        <div class="container">
+            <div class="box1 box" onclick="findstu()">
+                <p id="boxtext">Student</p>
+            </div>   
+            <div class="box2 box" onclick="findevent()">
+                <p id="boxtext">HackathonEvent</p>
+            </div>
+            <div class="box3 box">
+                <p id="boxtext">Internship</p>
+            </div>
+            <div class="box4 box">
+                <p id="boxtext">Job</p>
+            </div>
+        </div>
+       
+        <!-- <div class="functionality"> -->
+            
+        </div> 
+
+
+
+
+
+
+        <!-- <div class="hbox1">
+            <div class="overlay"></div> 
+            <h1 class="i1">Introduction to InternHacks</h1>
+            <p class="introtext">Welcome to the InternHacks! Our Hackathon and Internship Providing Website is more than just a platform; it's a dynamic ecosystem designed to bring together students, professionals, and organizations in a harmonious symphony of creativity and collaboration. Our mission is clear: to provide a comprehensive hub that fuels innovation, nurtures skill development, and encourages meaningful partnerships. Whether you're a passionate student looking to expand your technical and creative horizons or an organization eager to tap into fresh talent, our platform is your gateway to a world of endless possibilities. Join us as we embark on a journey to unlock your potential and drive the future of innovation!</p>           
+        </div>
+
+        <div class="hbox2">
+            <div class="in1hbox2">
+                <div class="box1 in2hboxborder" id="hackathon-box">
+                    <h4 class="b1">Hackathon Event</h4>
+                </div>
+                            
+                <div class="box2 in2hboxborder">
+                    <h4 class="b2">Internship</h4>
+                </div>
+            </div>
+            <div class="in2hbox2">
+                <div class="box4 in2hboxborder">
+                    <h4 class="b4">Student</h4>
+                </div>
+                <div class="box5 in2hboxborder">
+                    <h4 class="b5">Job</h4>
+                </div>
+            </div>
+        </div>-->
+        <div class="side-navigation" id="sideNav">
+            <h2 id="Profile">Profile</h2>
+            <ul>
+                    <form id="showprofile" action="" method="POST">
+                    <label id="label1" for="username">Username:</label>
+                    <!-- <input id="input1" type="text" id="username" name="username"> -->
+                    <output class="input1" type="text" id="username" name="username">
+                        <script>
+                            const Auth = localStorage.getItem('isAuthenticated');
+                            if (Auth=='true') {
+                                const name = document.getElementById("username");
+                                name.textContent = localStorage.getItem('username');
+                            }
+                            
+                        // console.log(name);                   
+                    </script>
+                    </output>
+                            
+                    <label id="label1" for="email">Email:</label>
+                    <!-- <input id="input1" type="email" id="email" name="email"> -->
+                    <output class="input1" type="email" id="email" name="email">
+                        <script>
+                            // const Auth = localStorage.getItem('isAuthenticated');
+                            if (Auth=='true') {
+                                const name = document.getElementById("email");
+                                name.textContent = localStorage.getItem('email');
+                            }
+                            
+                        // console.log(name);                   
+                    </script>
+                    </output>
+                                    
+                    <button id="button1" class="btn2" type="submit" onclick="logout()">logout</button>
+                </form>
+            </ul>
+        </div>
+    <!-- </div> -->
+
+    </div> 
+    <script src="project.js"></script>
+    <!-- <script src="home.js"></script> -->
+</body>
+</html>

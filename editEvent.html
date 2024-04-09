@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Event</title>
+    <!-- Include any CSS files if needed -->
+</head>
+<body>
+    <h1>Edit Event</h1>
+
+    <div id="eventDetails"></div>
+
+    <form id="editEventForm">
+        <!-- Add input fields for editing event details -->
+        <label for="eventName">Event Name:</label>
+        <input type="text" id="eventName" name="eventName" required>
+        <br>
+        
+        <label for="venue">Venue:</label>
+        <input type="text" id="venue" name="Venue" required>
+        <br>
+
+        <!-- <label for="participantsLimit">Participants Limit:</label>
+        <input type="number" id="participantsLimit" name="Participants_Limit" required>
+        <br>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="Date" required>
+        <br>
+
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="Time" required>
+        <br> -->
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="Description" required></textarea>
+        <br>
+        
+        <button type="submit">Save Changes</button>
+    </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Fetch event ID from query parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const eventId = urlParams.get('id');
+            
+            fetchEventDetails(eventId);
+        });
+
+        async function fetchEventDetails(eventId) {
+            try {
+                const response = await fetch(`http://localhost:3000/Eventsubmit/getevents/${eventId}`);
+                if (!response.ok) {
+                    throw new Error('Failed to fetch event details');
+                }
+                const eventData = await response.json();
+                console.log("eventData:",eventData);
+                displayEventDetails(eventData);
+            } catch (error) {
+                console.error('Error fetching event details:', error);
+            }
+        }
+
+        function displayEventDetails(eventData) {
+            const eventDetailsDiv = document.getElementById("eventDetails");
+            eventDetailsDiv.innerHTML = `
+                <strong>Event Name:</strong> ${eventData.EventName}<br>
+                <strong>Venue:</strong> ${eventData.Venue}<br>
+                <strong>Participants Limit:</strong> ${eventData.Participants_Limit}<br>
+                <strong>Date:</strong> ${eventData.Date}<br>
+                <strong>Time:</strong> ${eventData.Time}<br>
+                <strong>Description:</strong> ${eventData.Description}<br>
+                <strong>Organizer:</strong> ${eventData.Organizer}<br>
+            `;
+
+            // Fill input fields with existing event data for editing
+            const editEventForm = document.getElementById("editEventForm");
+            editEventForm.elements.eventName.value = eventData.EventName;
+            editEventForm.elements.venue.value = eventData.Venue;
+            // editEventForm.elements.participantsLimit.value = eventData.Participants_Limit;
+            // editEventForm.elements.date.value = eventData.Date;
+            // editEventForm.elements.time.value = eventData.Time;
+            editEventForm.elements.description.value = eventData.Description;
+        
+        
+        }
+
+        
+        // Add event listener for form submission
+        document.getElementById("editEventForm").addEventListener("submit", async function(event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            const editedEventData = Object.fromEntries(formData.entries());
+
+            const eventId = new URLSearchParams(window.location.search).get('id');
+
+            try {
+                const response = await fetch(`http://localhost:3000/Eventsubmit/editEvent/${eventId}`, {
+                    method: 'PATCH',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(editedEventData)
+                });
+                if (!response.ok) {
+                    throw new Error('Failed to edit event');
+                }
+                // If editing successful, redirect back to the events list page
+                window.location.href = 'events.html';
+            } catch (error) {
+                console.error('Error editing event:', error);
+            }
+        });
+    </script>
+</body>
+</html>

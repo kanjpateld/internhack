@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon Event Management</title>
+    <link rel="stylesheet" href="event.css">
+</head>
+<body>
+    <header>
+        <h1 class="hevent">Hackathon Event Management</h1>
+        <div id="toggleNavButton"></div>
+    </header>
+    
+    <div class="container">
+        <div class="event-details">
+            <h2>Event Details</h2>
+            <form id="event-form" action="/event">
+                <!-- Event details form fields here -->
+                <label for="eventName">Event Name:</label><br>
+                <input type="text" id="eventName" name="EventName"><br>
+                <label for="venue">Venue:</label><br>
+                <input type="text" id="venue" name="Venue"><br>
+                <label for="participantsLimit">Participants Limit:</label><br>
+                <input type="number" id="participantsLimit" name="Participants_Limit"><br>
+                <label for="eventDate">Date:</label><br>
+                <input type="date" id="eventDate" name="Date"><br>
+                <label for="eventTime">Time:</label><br>
+                <input type="time" id="eventTime" name="Time"><br>
+                <label for="eventDescription">Description:</label><br>
+                <textarea id="eventDescription" name="Description"></textarea><br>
+                <!-- <label for="fileInput"></label><br> -->
+                <!-- <input type="file" id="fileInput" name="fileInput"><br> -->
+                <button class="eventbutton" type="submit">Post Event</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="side-navigation" id="sideNav">
+        <h2 id="Profile">Profile</h2>
+        <ul>
+                <form id="showprofile" action="/profile" method="GET">
+                    
+                <label id="label1" for="username">Username:</label>
+                <!-- <input id="input1" type="text" id="username" name="username"> -->
+                <output class="input1" type="text" id="username" name="username" >
+                    <script>
+                        const Auth = localStorage.getItem('isAuthenticated');
+                        if (Auth=='true') {
+                            const name = document.getElementById("username");
+                            name.textContent = localStorage.getItem('username');
+                        }
+                        
+                    // console.log(name);                   
+                </script>
+
+
+                <!-- <script style="color: black;">console.log("kanj"); </script> -->
+                </output>
+                        
+                <label id="label1" for="email">Email:</label>
+                <!-- <input id="input1" type="email" id="email" name="email"> -->
+                <output class="input1" type="email" id="email" name="email" >
+                    <!-- <script style="color: black;">data.email</script> -->
+                    <script>
+                        // const Auth = localStorage.getItem('isAuthenticated');
+                        if (Auth=='true') {
+                            const name = document.getElementById("email");
+                            name.textContent = localStorage.getItem('email');
+                        }
+                        
+                    // console.log(name);                   
+                </script>
+                </output>
+                                
+                <button id="button1" class="btn2" type="submit" onclick="logout1()">logout</button>
+            </form>
+        </ul>
+    </div>
+    <!-- <div class="side-navigation" id="sideNav">
+        <h2 id="Profile">Profile</h2>
+        <ul>
+            <li>
+                <label for="username">Username:<3/label>
+                <span id="usernameValue"></span>
+            </li>
+            <li>
+                <label for="email">Email:</label>
+                <span id="emailValue"></span>
+            </li>
+            <li>
+                <button id="logoutButton" class="btn2">Logout</button>
+            </li>
+        </ul>
+    </div> -->
+    
+    <script src="event.js"></script>
+</body>
+</html>

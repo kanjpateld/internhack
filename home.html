@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Homepage</title>
     <link rel="stylesheet" href="home.css">
 </head>
 <body>
     <header>
         <!-- <div class="logoandnamebox"> -->
 
+          
           <div class="logo border"></div>
           <!-- <div class="lname border"> -->
             <!-- <div class="projectname">InternHacks</div> -->
@@ -18,7 +19,41 @@
               </div> -->
           <!-- </div> -->
           <!-- </div> -->
-          <div class="projectname">InternHacks</div>
+          
+        <div class="projectname">InternHacks</div>
+         
+        <!-- <div class="profilepage"> 
+          <div class="redirecthome" onclick="redirecthome()">
+            <h3 class="homepage">Profile</h3>
+          </div>
+        </div> -->
+
+        <!-- <div class="allprofile"> -->
+          <!-- <div class="profilepage cls2"> 
+            <div class="redirecthome" id="role" onclick="redirectprofile()">
+              <h3 class="homepage">Profile</h3>
+              <script>
+                const Auth = localStorage.getItem('isAuthenticated');
+                if (Auth=='true') {
+                  const name = localStorage.getItem('role');
+                    name.textContent = localStorage.getItem('role');
+                    console.log(role);
+                  function redirectprofile(){
+                    
+                    if(name=='student'){
+                      window.location.href = "http://127.0.0.1:5501/public/project.html" 
+                    }
+                    
+                }
+              }
+                
+            // console.log(name);                   
+        </script>
+            </div>
+          </div> -->
+
+          <div id="toggleNavButton" class="cls2"></div>
+        <!-- </div>  -->
       </header>
 
 
@@ -27,12 +62,20 @@
         <div class="intro2">
             <p>Welcome to the InternHacks! Our Hackathon and Internship Providing Website is more than just a platform; it's a dynamic ecosystem designed to bring together students, professionals, and organizations in a harmonious symphony of creativity and collaboration. Our mission is clear: to provide a comprehensive hub that fuels innovation, nurtures skill development, and encourages meaningful partnerships. Whether you're a passionate student looking to expand your technical and creative horizons or an organization eager to tap into fresh talent, our platform is your gateway to a world of endless possibilities. Join us as we embark on a journey to unlock your potential and drive the future of innovation!</p>
         </div>
-        <button class="button">Signup</button>  
+      
+        <div class="cls">
+        <!-- <a href="signup.html"><button class="button">Signup</button> </a> -->
+        <button class="button" onclick="openSignupPage()">Signup</button>
+        <!-- <a href="/signup"><button class="button" onclick="openSignupPage()">Signup</button></a> -->
+        <button class="button1" onclick="openLoginPage()">Login</button>  
+      </div>
+      <!-- <button class="button1 cls2" onclick="logout()">Logout</button>   -->
+
       </div>
 
 
       <div class="hack">
-        <div class="hackimage"></div>
+        <!-- <div class="hackimage"></div> -->
         <div class="hackintro">
             <h2 class="hackathon1">Hackathon</h2>
             <p class="hackathon2">Welcome to InternHacks where CSE students find their hackathon haven. Dive into a world of innovation, collaboration, and opportunity. Connect with the best minds, discover team members, and explore freelancing gigs and internships. At InternHacks we're not just a platform; we're your gateway to a future filled with exciting possibilities in the dynamic realm of Computer Science and Engineering. Join us and elevate your hackathon experience today!</p>
@@ -52,11 +95,55 @@
 
 
       <div class="Recru">
-        <div class="Recruimage"></div>
+        <!-- <div class="Recruimage"></div> -->
         <div class="Recruintro">
             <h2 class="Recruitment1">Recruitment</h2>
             <p class="Recruitment2">Welcome recruiters! At InternHacks we understand the importance of finding the right talent to drive innovation. Our platform is designed to connect you with top-notch CSE students, ensuring a seamless recruitment process. We aggregate student profiles and accomplishments from various platforms, allowing you to identify the most suitable candidates efficiently. Join us in shaping the future of your team by recruiting the best minds in the dynamic field of Computer Science and Engineering. Partner with InternHacks for a recruitment experience that matches your company's needs with the brightest talents.</p>
         </div>
       </div>
+
+      <div class="side-navigation" id="sideNav">
+        <h2 id="Profile">Profile</h2>
+        <ul>
+            <!-- <li><a href="#">My Profile</a></li>
+            <li><a href="#">My Events</a></li> -->
+            <form id="showprofile" action="" method="POST">
+                <label id="label1" for="username">Username:</label>
+                <!-- <input id="input1" type="text" id="username" name="username"> -->
+                <output class="input1" type="text" id="username" name="username">
+                  <script>
+                    const Auth = localStorage.getItem('isAuthenticated');
+                    if (Auth=='true') {
+                        const name = document.getElementById("username");
+                        name.textContent = localStorage.getItem('username');
+                    }
+                    
+                // console.log(name);                   
+            </script>
+                </output>
+                        
+                <label id="label1" for="email">Email:</label>
+                <!-- <input id="input1" type="email" id="email" name="email"> -->
+                <output class="input1" type="email" id="email" name="email">
+                  <script>
+                    // const Auth = localStorage.getItem('isAuthenticated');
+                    if (Auth=='true') {
+                        const name = document.getElementById("email");
+                        name.textContent = localStorage.getItem('email');
+                    }
+                    
+                // console.log(name);                   
+            </script>
+                </output>
+                
+                <button id="buttonn1" class="cls2" onclick="logout()">logout</button>
+                <!-- <button class="button1 cls2" type="submit" onclick="logout()">logout</button> -->
+            </form>
+        </ul>
+    </div>
+
+      <script src="home.js"></script>
+      <!-- <script src="login.js"></script> -->
+
 </body>
 </html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Cards</title>
+    <link rel="stylesheet" href="stucard1.css">
+    <Link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1 class="hevent">InternHacks</h1>
+        </div>
+        
+        <div class="redirecthome" onclick="redirecthome()">
+            <h3 class="homepage">Home</h3>
+        </div>
+        <div class="redirectstudent" onclick="redirectstudent()">
+            <h3 class="studentpage">Student Page</h3>
+            <!-- <h2 class="homepage">⌄</h2> -->
+        </div>
+        
+        <!-- <div id="toggleNavButton"></div> -->
+        
+    </header>
+    <div class="serach">
+        <div class="nav-search">
+            <!-- <select class="search-select">
+                <option>All</option>
+            </select> -->
+            <input placeholder="Search Language" class="search-input" onclick="createAndDisplayUserCards()">
+            <div class="search-icon"><i class="fa-solid fa-magnifying-glass" onclick="createAndDisplayUserCards()"></i></div>
+        </div>
+    </div>
+
+    <div id="card-container" class="card-container"></div>
+
+    <!-- <div class="side-navigation" id="sideNav">
+        <h2 id="Profile">Profile</h2>
+        <ul>
+                <form id="showprofile" action="" method="POST">
+                <label id="label1" for="username">Username:</label>
+              
+                <output id="input1" type="text" id="username" name="username"></output>
+                        
+                <label id="label1" for="email">Email:</label>
+               
+                <output id="input1" type="email" id="email" name="email"></output>
+                                
+                <button id="button1" class="btn2" type="submit" onclick="logout()">logout</button>
+            </form>
+        </ul>
+    </div> -->
+
+    <script src="stucard1.js"></script>
+</body>
+</html>
